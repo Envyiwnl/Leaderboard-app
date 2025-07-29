@@ -1,0 +1,26 @@
+{
+  "name": "leaderboard-backend",
+  "version": "1.0.0",
+  "description": "Express & MongoDB backend for the leaderboard app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "express",
+    "mongoose",
+    "leaderboard"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "mongoose": "^6.13.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
