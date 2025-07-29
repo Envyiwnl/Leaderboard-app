@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function RewardModal({ points, open, onClose }) {
   if (!open) return null;
 

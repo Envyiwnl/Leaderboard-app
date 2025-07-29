@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Leaderboard({ board }) {
   return (
     <div className="bg-white p-4 rounded-md shadow-xl">

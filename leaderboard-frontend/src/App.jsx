@@ -8,6 +8,7 @@ import RewardModal from "./components/RewardModal";
 import History from "./components/History";
 
 function App() {
+  // States Defined
   const [users, setUsers] = useState([]);
   const [selectedUserId, setSelectedUserId] = useState("");
   const [leaderboard, setLeaderboard] = useState([]);
@@ -18,11 +19,13 @@ function App() {
 
   const selectedUserName = users.find(u => u._id === selectedUserId)?.name || '';
 
+  // fetching reward history and user data
   useEffect(() => {
     fetchData();
     if (selectedUserId) fetchHistory(selectedUserId);
   }, [selectedUserId]);
 
+  //Inital data fetch
   const fetchData = async () => {
     try {
       const [usersRes, boardRes] = await Promise.all([
@@ -40,7 +43,8 @@ function App() {
       console.error("Error loading data:", err);
     }
   };
-
+  
+  // History Handler
   const fetchHistory = async (userId) => {
     try {
       const res = await api.get(`/history/${userId}`);
@@ -51,6 +55,7 @@ function App() {
     }
   };
 
+  // Add user handler
   const handleAddUser = async (name) => {
     try {
       await api.post("/users", { name });
@@ -60,6 +65,7 @@ function App() {
     }
   };
 
+  // Claim Handler
   const handleClaim = async () => {
     if (!selectedUserId) return;
     setClaiming(true);

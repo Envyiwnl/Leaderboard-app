@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// Users Schema
 const userSchema = new mongoose.Schema({
     name:{type:String, required:true},
     totalPoints:{type:Number, default:0},

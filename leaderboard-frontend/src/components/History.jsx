@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function History({ records, userName }) {
   const recs = Array.isArray(records) ? records : [];
 
@@ -18,15 +16,10 @@ export default function History({ records, userName }) {
 
   return (
     <div className="mt-6 bg-white p-4 rounded-md shadow">
-      {userName && (
-        <h2 className="text-lg font-semibold mb-2">
-          History
-        </h2>
-      )}
+      {userName && <h2 className="text-lg font-semibold mb-2">History</h2>}
 
-      {/* Scrollable list */}
       <ul className="space-y-2 max-h-48 overflow-y-auto">
-        {recs.map(r => {
+        {recs.map((r) => {
           const dt = new Date(r.claimedAt);
           const dateStr = dt.toLocaleDateString();
           const timeStr = dt.toLocaleTimeString();
@@ -36,7 +29,7 @@ export default function History({ records, userName }) {
               className="flex items-center justify-between border-b last:border-none pb-2"
             >
               <div className="text-sm text-gray-700">
-                <span className="font-medium">{dateStr}</span>{' '}
+                <span className="font-medium">{dateStr}</span>{" "}
                 <span>{timeStr}</span>
               </div>
 

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//Rewards Claim Schema
 const claimSchema = new mongoose.Schema({
     user:{type:mongoose.Schema.Types.ObjectId, ref: 'User', required: true},
     points:{type:Number, required:true},

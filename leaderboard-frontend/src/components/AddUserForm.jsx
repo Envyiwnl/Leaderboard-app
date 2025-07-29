@@ -4,6 +4,7 @@ export default function AddUserForm({ onAdd }) {
   const [name, setName] = useState("");
   const [touched, setTouched] = useState(false);
 
+  // checking input field via state
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name.trim()) {
@@ -32,8 +33,8 @@ export default function AddUserForm({ onAdd }) {
           className={`px-4 py-2 font-medium rounded-r-md focus:outline-none focus:ring-2 focus:ring-green-500
             ${
               name.trim()
-                ? "bg-green-600 text-white hover:bg-green-700"
-                : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                ? "bg-green-600 text-white hover:bg-green-700" // keeping the button green if content inside the input field
+                : "bg-gray-300 text-gray-500 cursor-not-allowed" // keeping the button gray if no content inside the input field
             }`}
         >
           Add
