@@ -5,7 +5,7 @@ export default function History({ records, userName }) {
 
   if (recs.length === 0) {
     return (
-      <div className="mt-6 bg-white p-4 rounded-md shadow text-center text-gray-500">
+      <div className="mt-6 bg-white p-4 rounded-md shadow text-center text-gray-500 shadow-xl">
         {userName && (
           <div className="mb-2 text-yellow-600 font-semibold">
             History for {userName}

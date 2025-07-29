@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+module.exports = {
+  content: [
+    './public/index.html',
+    './src/**/*.{js,jsx,ts,tsx}'
+  ],
   theme: {
     extend: {
       screens: {
@@ -8,12 +11,11 @@ export default {
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
-        nunito: ['Nunito', 'sans-serif'],
+        nunito:    ['Nunito',   'sans-serif'],
       },
-
       colors: {
         text: {
-          50: '#0d0c0c',
+          50:  '#0d0c0c',
           100: '#1a1919',
           200: '#353131',
           300: '#4f4a4a',
@@ -26,7 +28,7 @@ export default {
           950: '#f3f2f2',
         },
         background: {
-          50: '#140505',
+          50:  '#140505',
           100: '#290a0a',
           200: '#521414',
           300: '#7a1f1f',
@@ -39,7 +41,7 @@ export default {
           950: '#FDF7F7',
         },
         primary: {
-          50: '#0a0712',
+          50:  '#0a0712',
           100: '#130e25',
           200: '#271c4a',
           300: '#3a2a6f',
@@ -52,7 +54,7 @@ export default {
           950: '#efedf8',
         },
         secondary: {
-          50: '#021217',
+          50:  '#021217',
           100: '#05242e',
           200: '#09485d',
           300: '#0e6c8b',
@@ -65,7 +67,7 @@ export default {
           950: '#e8f7fd',
         },
         accent: {
-          50: '#000a1a',
+          50:  '#000a1a',
           100: '#001433',
           200: '#002966',
           300: '#003d99',
