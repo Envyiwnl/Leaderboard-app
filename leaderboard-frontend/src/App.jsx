@@ -83,7 +83,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6 bg-background-700">
+    <div className="min-h-screen p-6 bg-background-700">
       <RewardModal
         points={modalPoints}
         open={modalOpen}
